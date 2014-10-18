@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+    <body>
+
+        <ui:composition template="./plantilla/hdTemplate.xhtml">
+
+            <ui:define name="top">
+                <h1>Ingreso de Usuario</h1>
+            </ui:define>
+
+            <ui:define name="left">
+                left
+            </ui:define>
+
+            <ui:define name="content">
+                <h:form>
+                    <h:panelGrid columns="2">
+                        <h:outputLabel value="Id del Usuario:"/>
+                        <h:inputText value="#{usuarioMB.usuario.id}"/>
+                        <h:outputLabel value="Nombre:"/>
+                        <h:inputText value="#{usuarioMB.usuario.nombre}"/>
+                        <h:outputLabel value="Primer Apellido:"/>
+                        <h:inputText value="#{usuarioMB.usuario.primerApellido}"/>
+                        <h:outputLabel value="Segundo Apellido:"/>
+                        <h:inputText value="#{usuarioMB.usuario.segundoApellido}"/>
+                        <h:outputLabel value="Teléfono :"/>
+                        <h:inputText value="#{usuarioMB.usuario.telefono}"/>
+                        <h:outputLabel value="Email :"/>
+                        <h:inputText value="#{usuarioMB.usuario.correo}"/>
+                        <h:outputLabel value="Rol :"/>
+                        <h:inputText value="#{usuarioMB.usuario.rol}"/>
+                        <h:commandButton value="Guardar" 
+                                         action="#{usuarioMB.insertaUsuario()}"/>
+                    </h:panelGrid>
+                </h:form>
+            </ui:define>
+
+            <ui:define name="bottom">
+                bottom
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>
