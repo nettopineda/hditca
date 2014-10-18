@@ -8,7 +8,9 @@ package org.itca.com.beans;
 
 import java.util.List;
 import javax.persistence.EntityManager;
+//
 
+//
 /**
  *
  * @author DATUM
